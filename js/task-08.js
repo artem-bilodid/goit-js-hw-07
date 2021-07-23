@@ -5,10 +5,10 @@ const boxesEl = document.querySelector("#boxes");
 
 const createBoxes = (amount) => {
   const boxes = [];
-  let size = 30;
+  const initialSize = 30;
   for (let i = 0; i < Number(amount); i++) {
-    let box = document.createElement("div");
-    let boxSize = 30 + i * 10;
+    const box = document.createElement("div");
+    const boxSize = initialSize + i * 10;
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
     box.style.backgroundColor = "#" + Math.random().toString(16).substr(-6);
