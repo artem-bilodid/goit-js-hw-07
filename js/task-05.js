@@ -1,7 +1,7 @@
 const inputEl = document.querySelector("input#name-input");
 const outputEl = document.querySelector("span#name-output");
 
-const updateOutput = () => {
+const onTextFieldInput = () => {
   const newValue = inputEl.value;
   if (newValue) {
     outputEl.innerText = newValue;
@@ -10,4 +10,4 @@ const updateOutput = () => {
   }
 };
 
-inputEl.addEventListener("input", updateOutput);
+inputEl.addEventListener("input", onTextFieldInput);

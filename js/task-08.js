@@ -3,7 +3,7 @@ const renderBtnEl = document.querySelector('button[data-action="render"]');
 const destroyBtnEl = document.querySelector('button[data-action="destroy"]');
 const boxesEl = document.querySelector("#boxes");
 
-const createBoxes = (amount) => {
+const onRenderBtnClick = (amount) => {
   const boxes = [];
   const initialSize = 30;
   for (let i = 0; i < Number(amount); i++) {
@@ -18,9 +18,11 @@ const createBoxes = (amount) => {
   boxesEl.append(...boxes);
 };
 
-const destroyBoxes = () => {
+const onDestroyBtnClick = () => {
   boxesEl.innerHTML = "";
 };
 
-renderBtnEl.addEventListener("click", (event) => createBoxes(inputEl.value));
-destroyBtnEl.addEventListener("click", destroyBoxes);
+renderBtnEl.addEventListener("click", (event) =>
+  onRenderBtnClick(inputEl.value)
+);
+destroyBtnEl.addEventListener("click", onDestroyBtnClick);
